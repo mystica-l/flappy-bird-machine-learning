@@ -15,8 +15,8 @@ class Neuron:
     WEIGHT_MIN = -1.0
     BIAS_MAX = 1.0
     BIAS_MIN = -1.0
-    WEIGHT_ADJUSTMENT = 0.05
-    BIAS_ADJUSTMENT = 0.05
+    WEIGHT_ADJUSTMENT = 0.1
+    BIAS_ADJUSTMENT = 0.1
     
     # Constructor for new neuron
     def __init__(self, *args):
@@ -94,8 +94,8 @@ class NeuralNetwork:
     WEIGHT_MIN = -1
     BIAS_MAX = 1
     BIAS_MIN = -1
-    WEIGHT_ADJUSTMENT = 0.05
-    BIAS_ADJUSTMENT = 0.05
+    WEIGHT_ADJUSTMENT = 0.1
+    BIAS_ADJUSTMENT = 0.1
     fitness_score = 0.0
 
     # Constructor for new neural network

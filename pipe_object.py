@@ -33,7 +33,7 @@ class Pipe:
         self.bottom_pipe_collider = collider_objects.RectangleCollider(position_x, self.position_y, self.WIDTH, self.HEIGHT)
         self.x_velocity = x_velocity
 
-    # Moves pipe over
+    # Moves pipe over and resets it if need be
     def update(self, delta_time):
         if self.position_x < -68:
             self.position_x = 1131
