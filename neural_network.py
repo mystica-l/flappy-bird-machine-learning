@@ -3,7 +3,7 @@ import math
 # Sigmoid function to compress the value to -1 <= x <= 1
 def sig(x):
     try:
-        x = math.exp(x)
+        x = math.exp(-x)
     except OverflowError:
         x = float('inf')
     return 1/(1 + x)

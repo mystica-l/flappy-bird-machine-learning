@@ -15,11 +15,19 @@ The sum of these weights times their inputs and biases are then put through anot
 The sum of the nueron's output times their weights plus the biases give an activation value and determine whether or not the bird should jump at any given moment.  
 Then, fitness scores are given to each bird and the most successful birds are evolved by slightly tweaking their initially random weights before eventually creating a flappy bird that can handle any set of pipes.  
 
+## Dependencies
+Python 3.12  
+Pygame 2.5.2  
+
 ## How to Run:
 Step 1: Install Python  
 Step 2: Install pygame  
 ```bash
 pip install pygame
 ```
-
-Step 3: 
+Step 3: Download and unzip the code  
+Step 4: Navigate to the folder with the code an drun
+```bash
+python main.py
+```
+Step 5: Watch them learn!
