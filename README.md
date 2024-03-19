@@ -26,7 +26,7 @@ Step 2: Install pygame
 pip install pygame
 ```
 Step 3: Download and unzip the code  
-Step 4: Navigate to the folder with the code an drun
+Step 4: Navigate to the folder with the code and run
 ```bash
 python main.py
 ```
