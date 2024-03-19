@@ -1,5 +1,4 @@
 import pygame
-import collider_objects
 import pygame_set_up as pgsu
 
 # FlappyBird
@@ -27,8 +26,6 @@ class FlappyBird():
         self.angle_orientation = 0
         # Bird appears on screen with collision
         pgsu.screen.blit(self.bird_image, (position_x, position_y))
-        self.collider = collider_objects.CircleCollider(position_x, position_y, self.RADIUS)
-        #
         self.dead = False
 
     # Sets velocity to jump_force when jumping 
@@ -52,7 +49,6 @@ class FlappyBird():
             self.y_velocity += delta_time * self.gravity
             self.position_y += delta_time * self.y_velocity
             pgsu.screen.blit(self.bird_image, (self.position_x - int(self.bird_image.get_width() / 2), self.position_y - int(self.bird_image.get_height() / 2)))
-            self.collider.update(self.position_x, self.position_y)
 
     # Kills the bird
     def death(self):

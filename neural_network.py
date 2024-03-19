@@ -1,10 +1,12 @@
-import numpy
 import random
-
+import math
 # Sigmoid function to compress the value to -1 <= x <= 1
 def sig(x):
-    x = numpy.float32(x)
-    return 1/(1 + numpy.exp(-x))
+    try:
+        x = math.exp(x)
+    except OverflowError:
+        x = float('inf')
+    return 1/(1 + x)
 
 # Neuron class
 # Takes in x number of inputs and assigns weights to them before returning

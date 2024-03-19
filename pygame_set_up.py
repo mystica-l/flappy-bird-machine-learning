@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 SCALE = 1.75
 
 #FPS
-FPS = 30
+FPS = 60
 
 # Background images
 sky_image = pygame.image.load("assets/background-day.png")

@@ -1,5 +1,4 @@
 import pygame
-import collider_objects
 import random
 import pygame_set_up as pgsu
 
@@ -25,12 +24,9 @@ class Pipe:
         self.top_pipe_image = pygame.transform.scale(self.top_pipe_image, (int(self.top_pipe_image.get_width() * self.SCALE), int(self.top_pipe_image.get_height() * self.SCALE)))
         self.bottom_pipe_image = pygame.image.load("assets/bottom-pipe.png")
         self.bottom_pipe_image = pygame.transform.scale(self.bottom_pipe_image, (int(self.bottom_pipe_image.get_width() * self.SCALE), int(self.bottom_pipe_image.get_height() * self.SCALE)))
-
         self.position_y = int(random.uniform(self.HIGHEST_POSITION_Y, self.LOWEST_POSITION_Y))
         self.gap = int(random.uniform(self.SMALLEST_GAP, self.LARGEST_GAP))
         self.position_x = position_x
-        self.top_pipe_collider = collider_objects.RectangleCollider(position_x, self.position_y - self.gap, self.WIDTH, self.HEIGHT)
-        self.bottom_pipe_collider = collider_objects.RectangleCollider(position_x, self.position_y, self.WIDTH, self.HEIGHT)
         self.x_velocity = x_velocity
 
     # Moves pipe over and resets it if need be
@@ -42,5 +38,3 @@ class Pipe:
         self.position_x -= delta_time * self.x_velocity
         pgsu.screen.blit(self.top_pipe_image, (self.position_x, self.position_y - self.gap))
         pgsu.screen.blit(self.bottom_pipe_image, (self.position_x, self.position_y))
-        self.top_pipe_collider.update(self.position_x, self.position_y - self.gap)
-        self.bottom_pipe_collider.update(self.position_x, self.position_y)
